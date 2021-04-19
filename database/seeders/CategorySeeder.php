@@ -15,6 +15,22 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        Category::factory(10)->has(Produit::factory(50))->create();
+        Category::create([
+
+            'description'=>'iphone',
+            'Libelle' => 'vente',
+        ]);
+
+        Category::create([
+
+            'description'=>'nokia',
+            'Libelle' => 'vendu',
+        ]);
+
+        Category::create([
+
+            'description'=>'hp',
+            'Libelle' => 'loue',
+        ]);
     }
 }
